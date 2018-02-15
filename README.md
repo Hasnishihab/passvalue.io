@@ -2,8 +2,11 @@
 <head>
 </head>
 <body>
-<form action="https://github.com/Hasnishihab/recieve_value.io.git" method="GET">
-   fetch('', { qs: { a: 1, b: 2 } })
+<form action="data2" method="GET">
+   fetch('https://hasnishihab.github.io/passvalue.io/', { qs: { a: 1, b: 2 } })
+	<p value='a'></p>
+	<p value='b'></p>
+	
    <input type="text" name="serialNumber" /><br>
 	<input type="text" name="name" />
     <input type="submit" value="Submit" />
