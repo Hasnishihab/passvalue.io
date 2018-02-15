@@ -2,7 +2,7 @@
 <head>
 </head>
 <body>
-<form action="data2.html" method="GET">
+<form action="https://github.com/Hasnishihab/recieve_value.io.git" method="GET">
     <input type="text" name="serialNumber" /><br>
 	<input type="text" name="name" />
     <input type="submit" value="Submit" />
