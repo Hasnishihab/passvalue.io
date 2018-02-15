@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+var x = new Array();
+    var queryString = decodeURIComponent(window.location.search);
+    queryString = queryString.substring(1);
+   var queries = queryString.split("&");
+   for (var i = 0; i < queries.length; i++)
+  {
+     document.write(queries[i] + "<br>");
+	 csvdat = queries[i].split("=");
+	 document.write(csvdat[1]+ "<br>");
+	x[i]=csvdat[1];
+  }
+ document.write(x+ "<br>");
+      function initMap() {
+	   var la=x[0];
+	   var ln=x[1];
+	   markerpoint = new google.maps.LatLng(la,ln);
+       
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: markerpoint
+        });
+        var marker = new google.maps.Marker({
+          position:markerpoint,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1VMJrkw2K8qgbPXQGheDYn9C80aLMMUQ&callback=initMap">
+    </script>
+  </body>
+</html>
